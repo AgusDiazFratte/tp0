@@ -86,9 +86,13 @@ void leer_consola(t_log* logger)
 
 	// La primera te la dejo de yapa
 	leido = readline("> ");
-
 	// El resto, las vamos leyendo y logueando hasta recibir un string vacío
-
+	while (strlen(leido) > 0){
+		log_info (logger,leido);
+		free(leido);
+		leido = readline("> ");
+	}
+	free(leido);
 
 	// ¡No te olvides de liberar las lineas antes de regresar!
 
