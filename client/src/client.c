@@ -28,6 +28,8 @@ int main(void)
 	config = iniciar_config();
 
 	valor = config_get_string_value (config,"CLAVE");
+	ip = config_get_string_value (config,"IP");
+	puerto = config_get_string_value (config,"PUERTO");
 
 	log_info (logger, valor);
 
